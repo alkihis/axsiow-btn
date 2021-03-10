@@ -56,8 +56,8 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    browserBaseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:5023' : ('http://' + process.env.AXSIOWHOST),
-    baseURL: process.env.NODE_ENV === 'production' ? 'http://localhost:5023/axsiow-btn' : 'http://localhost:5023',
+    browserBaseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:5023' : process.env.AXSIOWHOST,
+    baseURL: process.env.NODE_ENV === 'production' ? 'http://localhost:5023/tgaxsiow' : 'http://localhost:5023',
     progress: false,
   },
 
@@ -72,7 +72,7 @@ export default {
   },
 
   router: {
-    base: process.env.NODE_ENV === 'production' ? '/axsiow-btn/' : '/',
+    base: process.env.NODE_ENV === 'production' ? '/tgaxsiow/' : '/',
   },
 
   // Middleware for proxying API calls + login
