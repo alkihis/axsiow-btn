@@ -57,7 +57,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     browserBaseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:5023' : ('http://' + process.env.AXSIOWHOST),
-    baseURL: 'http://localhost:5023',
+    baseURL: process.env.NODE_ENV === 'production' ? 'http://localhost:5023/axsiow-btn' : 'http://localhost:5023',
     progress: false,
   },
 
