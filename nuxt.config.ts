@@ -72,7 +72,7 @@ export default {
   },
 
   router: {
-    // base: '/tgaxsiow/',
+    base: process.env.NODE_ENV === 'production' ? '/axsiow-btn/' : '/',
   },
 
   // Middleware for proxying API calls + login
