@@ -7,8 +7,9 @@ app.set('trust proxy', 1); // trust first proxy
 app.use(session({
   secret: process.env.SESSION_SECRET!,
   resave: true,
+  proxy: true,
   saveUninitialized: true,
-  cookie: { secure: process.env.NODE_ENV === 'production' },
+  cookie: { secure: false },
   name: 'axsiow.session',
 }));
 
